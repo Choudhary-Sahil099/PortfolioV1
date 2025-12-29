@@ -11,7 +11,9 @@ const App = () => {
     <>
     <Navbar/>
     <Profile />
+    <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
     <Skill />
+    <div className="h-[2px] w-full bg-gradient-to-r from-transparent via-violet-500 to-transparent" />
     <Projects />
     <Contact />
     </>

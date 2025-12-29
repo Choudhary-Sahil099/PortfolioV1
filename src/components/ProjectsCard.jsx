@@ -1,32 +1,32 @@
 import React from 'react'
 import Code from '../assets/Code.png'
+import { FaCode } from "react-icons/fa";
 
 const ProjectsCard = ({ title, des, Img }) => {
   return (
-    <div className="bg-white h-full w-full rounded-xl flex flex-col p-3 gap-2 
-                    border border-transparent hover:border-violet-500 transition">
+    <div className="bg-white h-130 w-90 shrink-0 px-4 py-4 rounded-3xl flex flex-col justify-center items-center gap-5">
       
       <img
         src={Img}
-        className="w-full h-48 object-cover rounded-xl"
+        className="w-full h-55 object-cover rounded-xl"
       />
 
-      <h2 className="text-center text-xl underline font-semibold">
+      <div className="bg-[#5419D7] w-40 h-8 flex justify-center items-center rounded-xl text-white ">
         {title}
-      </h2>
+      </div>
 
-      <p className="text-[12px] text-gray-600 line-clamp-7">
+      <p className=" line-clamp-6">
         {des}
       </p>
 
       <div className="flex gap-3">
-        <button className="bg-[#5419D7] text-white p-2 rounded-xl text-[15px] w-20 hover:bg-[#7e61d3]">
+        <button className="bg-[#8d63e8] text-white p-2 rounded-xl text-[15px] w-20 hover:bg-[#7e61d3]">
           Live view
         </button>
 
-        <button className="bg-[#5419D7] text-white p-2 rounded-xl w-10 
+        <button className="bg-[#8d63e8] text-white p-2 rounded-xl w-10 
                            hover:bg-[#7e61d3] flex justify-center items-center">
-          <img src={Code} className="w-5 h-5" />
+          <FaCode className='h-5 w-10'/>
         </button>
       </div>
     </div>
