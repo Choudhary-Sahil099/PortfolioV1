@@ -6,3 +6,45 @@
   font-weight: 400;
   font-style: normal;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+.send-btn >div {
+  color: white;
+  font-size: large;
+}
+
+.send-btn {
+  background: linear-gradient(45deg, #6c00fa, #6c00fa);
+  width: 8em;
+  height: 2.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.icon {
+  position: absolute;
+  transition: all 0.3s ease;
+  transform: translateX(70px);
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+}
+
+.send-btn:hover {
+  background: linear-gradient(45deg, #6c00fa, #db1334);
+}
+
+.send-btn:hover > div {
+  transform: translateX(-20px);
+}
+
+.send-btn:hover .icon {
+  opacity: 1;
+  transform: translateX(30px);
+}

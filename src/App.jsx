@@ -3,6 +3,7 @@ import Navbar from './components/navbar';
 import Profile from './components/profile';
 import Skill from './components/Skill';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 
 const App = () => {
@@ -10,8 +11,9 @@ const App = () => {
     <>
     <Navbar/>
     <Profile />
-    <hr className="border-t border-black-300" />
+    <Skill />
     <Projects />
+    <Contact />
     </>
   )
 }
