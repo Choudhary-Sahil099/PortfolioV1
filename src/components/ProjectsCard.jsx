@@ -20,12 +20,12 @@ const ProjectsCard = ({ title, des, Img }) => {
       </p>
 
       <div className="flex gap-3">
-        <button className="bg-[#8d63e8] text-white p-2 rounded-xl text-[15px] w-20 hover:bg-[#7e61d3]">
+        <button className="bg-[#8d63e8] text-white p-2 rounded-xl text-[15px] w-20 hover:bg-[#7e61d3] cursor-pointer">
           Live view
         </button>
 
         <button className="bg-[#8d63e8] text-white p-2 rounded-xl w-10 
-                           hover:bg-[#7e61d3] flex justify-center items-center">
+                           hover:bg-[#7e61d3] flex justify-center items-center cursor-pointer">
           <FaCode className='h-5 w-10'/>
         </button>
       </div>

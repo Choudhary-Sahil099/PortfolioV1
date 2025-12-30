@@ -1,6 +1,8 @@
 import React from "react";
 import ContactImg from "../assets/Contact.png";
 import { IoIosSend } from "react-icons/io";
+import {FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { TbBrandGithubFilled } from "react-icons/tb";
 const Contact = () => {
   return (
     <div className="bg-[#F9E6FF] min-h-[90vh] px-20 flex pt-10 gap-40">
@@ -47,15 +49,26 @@ const Contact = () => {
             />
           </div>
 
-          <button className="send-btn">
-            <div>Send</div> 
-            <IoIosSend className="icon" />
-          </button>
+          <div className="flex justify-between items center">
+            <button className="send-btn">
+              <div>Send</div>
+              <IoIosSend className="icon" />
+            </button>
+            <div className="flex justify-center items-center gap-2 text-3xl">
+              <a className="h-full w-full text-purple-800 cursor-pointer"><TbBrandGithubFilled /></a>
+              <a className="h-full w-full text-purple-800"><FaLinkedinIn/></a>
+              <a className="h-full w-full text-purple-800"><FaTwitter/></a>
+            </div>
+          </div>
         </form>
       </div>
 
       <div className="flex justify-center items-start pt-10 display-cover">
-        <img src={ContactImg} alt="Contact illustration" className=" w-[70vh] h-auto object-contain" />
+        <img
+          src={ContactImg}
+          alt="Contact illustration"
+          className=" w-[70vh] h-auto object-contain"
+        />
       </div>
     </div>
   );

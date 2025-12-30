@@ -25,6 +25,7 @@ html {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .icon {
@@ -47,4 +48,112 @@ html {
 .send-btn:hover .icon {
   opacity: 1;
   transform: translateX(30px);
+}
+
+/* Hide scrollbar but allow scroll */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+html {
+  scrollbar-width: none; /* Firefox */
+}
+
+#preloader{
+  background: #F9E6FF url(./assets/Loading.gif) no-repeat center;
+  background-size: 12%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 60;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 22vw;
+  background: #ca8aed;
+  color: white;
+
+  transform: translateX(100%);
+  transition: transform 0.35s ease-in-out;
+
+  z-index: 70;
+  padding: 2rem 1.8rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+/* ===== Close Button ===== */
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/* ===== Menu List ===== */
+.side-menu ul {
+  margin-top: 3rem;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ===== Menu Items ===== */
+.side-menu li {
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  width: fit-content;
+}
+
+/* Hover underline animation */
+.side-menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #7342de;
+  transition: width 0.25s ease;
+}
+
+.side-menu li:hover::after {
+  width: 100%;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .side-menu {
+    width: 80vw;
+  }
 }
