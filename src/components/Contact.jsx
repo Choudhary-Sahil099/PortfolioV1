@@ -5,7 +5,7 @@ import {FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { TbBrandGithubFilled } from "react-icons/tb";
 const Contact = () => {
   return (
-    <div className="bg-[#F9E6FF] min-h-[90vh] px-20 flex pt-10 gap-40">
+    <section className="bg-[#F9E6FF] min-h-[90vh] px-20 flex pt-10 gap-40" id="contact">
       <div className="bg-[#F1D7FA] h-[80vh] w-[30vw] rounded-3xl pt-10">
         <form className="flex flex-col px-10 gap-4">
           <h1 className="text-5xl">
@@ -55,9 +55,9 @@ const Contact = () => {
               <IoIosSend className="icon" />
             </button>
             <div className="flex justify-center items-center gap-2 text-3xl">
-              <a className="h-full w-full text-purple-800 cursor-pointer"><TbBrandGithubFilled /></a>
-              <a className="h-full w-full text-purple-800"><FaLinkedinIn/></a>
-              <a className="h-full w-full text-purple-800"><FaTwitter/></a>
+              <a className="h-full w-full text-purple-800 cursor-pointer" href="https://github.com/Choudhary-Sahil099" target="_blank"><TbBrandGithubFilled /></a>
+              <a className="h-full w-full text-purple-800 cursor-pointer"><FaLinkedinIn/></a>
+              <a className="h-full w-full text-purple-800 cursor-pointer"><FaTwitter/></a>
             </div>
           </div>
         </form>
@@ -70,7 +70,7 @@ const Contact = () => {
           className=" w-[70vh] h-auto object-contain"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

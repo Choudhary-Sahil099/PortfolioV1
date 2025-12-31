@@ -11,7 +11,7 @@ const Navbar = ({ setOpen }) => {
       <div className="flex items-center gap-4">
         <button
           aria-label="Open Resume"
-          className="bg-[#5419D7] h-14 w-16 flex items-center justify-center rounded-xl hover:bg-[#7342de]"
+          className="bg-[#5419D7] h-14 w-16 flex items-center justify-center rounded-xl hover:bg-[#7342de] cursor-pointer"
         >
           <img className="h-10 w-10" src={resume} alt="resume" />
         </button>
@@ -19,7 +19,7 @@ const Navbar = ({ setOpen }) => {
         <button
           aria-label="Open Menu"
           onClick={() => setOpen(true)}
-          className="bg-[#5419D7] h-14 w-16 flex items-center justify-center rounded-xl hover:bg-[#7342de]"
+          className="bg-[#5419D7] h-14 w-16 flex items-center justify-center rounded-xl hover:bg-[#7342de] cursor-pointer"
         >
           <TiThMenu className="h-10 w-12 text-white" />
         </button>

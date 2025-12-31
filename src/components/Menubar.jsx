@@ -20,10 +20,33 @@ const Menubar = ({ open, setOpen }) => {
         </button>
 
         <ul>
-          <li className="flex justify-center items-center gap-3"><FaAnglesRight />Profile</li>
-          <li className="flex justify-center items-center gap-3"><FaAnglesRight />Skills</li>
-          <li className="flex justify-center items-center gap-3"><FaAnglesRight />Projects</li>
-          <li className="flex justify-center items-center gap-3"><FaAnglesRight />Contact</li>
+          <li className="flex justify-center items-center gap-3" onClick={() =>{
+            setOpen(false)
+            setTimeout(() => {
+              document.getElementById("profile")?.scrollIntoView();
+            },50);
+          }}><FaAnglesRight />Profile</li>
+          <li className="flex justify-center items-center gap-3"  onClick={() =>{
+            setOpen(false)
+            setTimeout(() => {
+              document.getElementById("skill")?.scrollIntoView();
+            },50);
+          }}
+          ><FaAnglesRight />Skills</li>
+          <li className="flex justify-center items-center gap-3" onClick={() =>{
+            setOpen(false)
+            setTimeout(() => {
+              document.getElementById("projects")?.scrollIntoView();
+            },50);
+          }}
+          ><FaAnglesRight />Projects</li>
+          <li className="flex justify-center items-center gap-3"  onClick={() =>{
+            setOpen(false)
+            setTimeout(() => {
+              document.getElementById("contact")?.scrollIntoView();
+            },50);
+          }}
+          ><FaAnglesRight />Contact</li>
         </ul>
       </div>
     </>

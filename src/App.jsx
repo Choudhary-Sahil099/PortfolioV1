@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import Profile from "./components/profile";
 import Skill from "./components/Skill";
 import Projects from "./components/Projects";
@@ -19,7 +19,7 @@ const App = () => {
     return () => window.removeEventListener("load", handleLoad);
   }, []);
 
-  // 🔒 Lock scroll when menu open
+  //useeffect to loack the background when the menu is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
@@ -32,6 +32,7 @@ const App = () => {
         <>
           <Navbar setOpen={setOpen} />
           <Menubar open={open} setOpen={setOpen} />
+
           <Profile />
           <Divider />
           <Skill />

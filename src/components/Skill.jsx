@@ -6,7 +6,7 @@ import Problem from "../assets/problemSolving.png"
 
 const Skill = () => {
   return (
-    <div className='flex flex-col px-20 min-h-screen w-full bg-[#F9E6FF] gap-10'>
+    <section className='flex flex-col px-20 min-h-screen w-full bg-[#F9E6FF] gap-10' id='skill'>
       <div className='flex flex-col pt-10 gap-2'>
         <h3 className='text-2xl text-[#27083F]'>Skills i have</h3>
         <h1 className='text-5xl'><span className='text-4xl text-[#5419D7]'>Tools and Technologies</span><br/> I work with</h1>
@@ -29,7 +29,7 @@ const Skill = () => {
         />
         
       </div>
-    </div>
+    </section>
   )
 }
 

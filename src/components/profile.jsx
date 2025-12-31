@@ -3,7 +3,7 @@ import Pic from "../assets/profile.png";
 import { IoCall } from "react-icons/io5";
 const Profile = () => {
   return (
-    <div className="bg-[#F9E6FF] min-h-[87vh] w-full flex flex-row px-20 gap-20">
+    <section className="bg-[#F9E6FF] min-h-[87vh] w-full flex flex-row px-20 gap-20" id="profile">
         <div className="pt-17 flex flex-col gap-6">
           <p className="text-2xl">
             <span className="text-[#5419D7]">Hello</span> There!
@@ -20,14 +20,16 @@ const Profile = () => {
             scalable applications and solving real-world challenges through
             clean, analytical code.
           </p>
-          <button className="bg-[#5419D7] text-white w-45 h-15 rounded-xl text-2xl hover:bg-[#7342de] cursor-pointer mt-6 flex justify-center items-center gap-2">
+          <button className="bg-[#5419D7] text-white w-45 h-15 rounded-xl text-2xl hover:bg-[#7342de] cursor-pointer mt-6 flex justify-center items-center gap-2" onClick={() => {
+            document.getElementById("contact")?.scrollIntoView();
+          }}>
             <div>Contact Me</div> <IoCall />
           </button>
         </div>
         <div className="flex items-center justify-center">
           <img className="h-[65%] rounded-full object-contai" src={Pic} />
         </div>
-      </div>
+      </section>
   );
 };
 
