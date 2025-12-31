@@ -7,6 +7,8 @@ import Contact from "./components/Contact";
 import Divider from "./components/Divider";
 import Preloader from "./components/Preloader";
 import Menubar from "./components/Menubar";
+import { Toaster } from "react-hot-toast";
+
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -19,7 +21,6 @@ const App = () => {
     return () => window.removeEventListener("load", handleLoad);
   }, []);
 
-  //useeffect to loack the background when the menu is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
   }, [open]);
@@ -32,7 +33,7 @@ const App = () => {
         <>
           <Navbar setOpen={setOpen} />
           <Menubar open={open} setOpen={setOpen} />
-
+          <Toaster />
           <Profile />
           <Divider />
           <Skill />

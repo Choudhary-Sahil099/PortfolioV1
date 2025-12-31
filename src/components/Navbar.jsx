@@ -9,12 +9,13 @@ const Navbar = ({ setOpen }) => {
       <img className="h-14 w-16" src={Logo} alt="logo" />
 
       <div className="flex items-center gap-4">
-        <button
+        <a
           aria-label="Open Resume"
           className="bg-[#5419D7] h-14 w-16 flex items-center justify-center rounded-xl hover:bg-[#7342de] cursor-pointer"
+          href=""
         >
           <img className="h-10 w-10" src={resume} alt="resume" />
-        </button>
+        </a>
 
         <button
           aria-label="Open Menu"
