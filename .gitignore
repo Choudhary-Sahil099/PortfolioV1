@@ -1,0 +1,9 @@
+# dependencies
+node_modules/
+
+# backend private assets
+backend/private/
+
+# env files
+.env
+.env.local

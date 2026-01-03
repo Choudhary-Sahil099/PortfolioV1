@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
   scroll-behavior: smooth;
@@ -160,4 +163,61 @@ html {
 
 #profile{
   scroll-margin-top: 120px; /* height of navbar */
+}
+
+
+/* -----### NavBar  ###------ */
+
+@layer components{
+  .navWraper{
+    @apply flex justify-between items-center px-20 pt-10 pb-2 bg-[#F9E6FF] sticky top-0 z-50
+  }
+  .nav-Btn{
+    @apply bg-[#5419D7] h-14 w-16 flex items-center justify-center rounded-xl hover:bg-[#7342de] cursor-pointer
+  }
+  .nav-BtnImg{
+    @apply h-10 w-12 
+  }
+}
+
+/* -----### Profile ###------ */
+
+
+@layer components{
+  .profile-Wrapper{
+    @apply bg-[#F9E6FF] min-h-[87vh] w-full flex flex-row px-20 gap-20
+  }
+  .introText{
+    @apply pt-17 flex flex-col gap-6
+  }
+  .contact-btn{
+    @apply bg-[#5419D7] text-white w-45 h-15 rounded-xl text-2xl hover:bg-[#7342de] cursor-pointer mt-6 flex justify-center items-center gap-2
+  }
+
+  .imageDiv{
+    @apply flex items-center justify-center
+  }
+  .profilePic{
+    @apply h-[65%] rounded-full object-contain
+  }
+}
+
+/* -----### Skill Card ###------ */
+
+@layer contain{
+  .skillCardWrapper{
+    @apply bg-white px-4 h-130 w-90 rounded-3xl flex flex-col justify-center items-center gap-5
+  }
+  .skillImg{
+    @apply h-55 w-full object-cover rounded-xl
+  }
+  .skillTitle{
+    @apply bg-[#5419D7] w-40 h-8 flex justify-center items-center text-white rounded-xl
+  }
+  .skillp{
+    @apply line-clamp-6
+  }
+  .skill-btn{
+    @apply bg-[#8d63e8] text-white w-35 h-10 rounded-xl cursor-pointer
+  }
 }
