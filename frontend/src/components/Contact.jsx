@@ -37,11 +37,11 @@ const Contact = () => {
 
   return (
     <section
-      className="bg-[#F9E6FF] min-h-[90vh] px-20 flex pt-10 gap-40"
+      className="ContactWrapper"
       id="contact"
     >
-      <div className="bg-[#F1D7FA] h-[80vh] w-[30vw] rounded-3xl pt-10">
-        <form className="flex flex-col px-10 gap-4" onSubmit={onSubmit}>
+      <div className="ConDiv1">
+        <form className="ConForm" onSubmit={onSubmit}>
           <h1 className="text-5xl">
             Let's <span className="text-[#5419D7]">Talk</span>
           </h1>
@@ -51,16 +51,13 @@ const Contact = () => {
             work together on some crazy ideal projects.
           </p>
 
-          {/* Name */}
-          <div className="flex flex-col gap-3">
+          <div className="formDiv1">
             <h3 className="text-[#C85CF2]">Your Name</h3>
             <input
               type="text"
               name="name"
               required
-              className="w-full h-10 bg-white rounded-xl px-4 
-              outline-none border border-gray-300
-              focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
+              className="formInput"
               placeholder="Enter your name..."
             />
           </div>
@@ -72,9 +69,7 @@ const Contact = () => {
               type="email"
               name="email"
               required
-              className="w-full h-10 bg-white rounded-xl px-4 
-              outline-none border border-gray-300
-              focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
+              className="formInput"
               placeholder="Enter your email..."
             />
           </div>
@@ -85,9 +80,7 @@ const Contact = () => {
             <textarea
               name="message"
               required
-              className="w-full h-40 p-4 bg-white resize-none rounded-2xl
-              outline-none border border-gray-300
-              focus:ring-2 focus:ring-violet-500 focus:border-violet-500"
+              className="formMess"
               placeholder="Type your message..."
             />
           </div>
@@ -131,8 +124,8 @@ const Contact = () => {
         </form>
       </div>
 
-      {/* Illustration */}
-      <div className="flex justify-center items-start pt-10 display-cover">
+
+      <div className="contDiv2">
         <img
           src={ContactImg}
           alt="Contact illustration"

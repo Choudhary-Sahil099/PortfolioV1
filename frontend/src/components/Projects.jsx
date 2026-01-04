@@ -47,7 +47,7 @@ const Projects = () => {
 
   return (
     <section
-      className="bg-[#F9E6FF] min-h-screen px-20 flex flex-col gap-7"
+      className="pWrapper"
       id="projects"
     >
       <div className="flex flex-col pt-10">
@@ -95,21 +95,21 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center gap-5">
+      <div className="pBtnDiv">
         <button
           onClick={prev}
           disabled={index === -1}
-          className="flex justify-center items-center bg-[#420D72] rounded-full h-14 w-14 hover:bg-[#6a3d95] disabled:opacity-40"
+          className="pButton"
         >
-          <FaAngleLeft className="text-white h-8 w-8" />
+          <FaAngleLeft className="pButtonIcon" />
         </button>
 
         <button
           onClick={next}
           disabled={index === maxIndex+1}
-          className="flex justify-center items-center bg-[#420D72] rounded-full h-14 w-14 hover:bg-[#6a3d95] disabled:opacity-40"
+          className="pButton"
         >
-          <FaAngleRight className="text-white h-8 w-8" />
+          <FaAngleRight className="pButtonIcon" />
         </button>
       </div>
     </section>
