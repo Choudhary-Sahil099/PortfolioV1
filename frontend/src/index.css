@@ -319,7 +319,7 @@ html {
 
 
   .contDiv2{
-    @apply flex justify-center items-start pt-10 display-cover
+    @apply flex justify-center items-start pt-10
   }
   .contImg{
     @apply w-[70vh] h-auto object-contain
