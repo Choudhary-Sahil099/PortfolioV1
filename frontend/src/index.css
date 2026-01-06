@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Iceberg&display=swap");
 @import "tailwindcss";
 @tailwind base;
 @tailwind components;
@@ -7,13 +7,14 @@
 html {
   scroll-behavior: smooth;
 }
-*{
-    font-family: "Iceberg", sans-serif;
+* {
+  font-family: "Iceberg", sans-serif;
   font-weight: 400;
   font-style: normal;
+  margin: 0;
 }
 
-.send-btn >div {
+.send-btn > div {
   color: white;
   font-size: large;
 }
@@ -62,8 +63,8 @@ html {
   scrollbar-width: none; /* Firefox */
 }
 
-#preloader{
-  background: #F9E6FF url(./assets/Loading.gif) no-repeat center;
+#preloader {
+  background: #f9e6ff url(./assets/Loading.gif) no-repeat center;
   background-size: 12%;
   height: 100vh;
   width: 100%;
@@ -161,167 +162,166 @@ html {
   }
 }
 
-#profile{
+#profile {
   scroll-margin-top: 120px; /* height of navbar */
 }
 
-
 /* -----### NavBar  ###------ */
 
-@layer components{
-  .navWraper{
-    @apply flex justify-between items-center px-20 pt-10 pb-2 bg-[#F9E6FF] sticky top-0 z-50
+@layer components {
+  .navWraper {
+    @apply flex justify-between items-center px-8 pt-5 pb-2 bg-[#F9E6FF] sticky top-0 z-50 sm:px-20 sm:pt-10;
   }
-  .nav-Btn{
-    @apply bg-[#5419D7] h-14 w-16 flex items-center justify-center rounded-xl hover:bg-[#7342de] cursor-pointer
+  .nav-Btn {
+    @apply bg-[#5419D7]
+    h-9 w-10
+    flex items-center justify-center
+    rounded-md
+    cursor-pointer
+    hover:bg-[#7342de]
+    sm:h-14 sm:w-16 sm:rounded-xl;
   }
-  .nav-BtnImg{
-    @apply h-10 w-12 
+  .nav-BtnImg {
+    @apply h-7 w-8 sm:h-10 sm:w-12 ;
   }
 }
 
 /* -----### Profile ###------ */
 
+@layer components {
+  .profile-Wrapper {
+    @apply bg-[#F9E6FF] min-h-[87vh] w-full flex flex-row gap-3 px-8 sm:px-20 sm:gap-20;
+  }
+  .introText {
+    @apply pt-8 sm:pt-17 flex flex-col  gap-3 sm:gap-6 ;
+  }
+  .contact-btn {
+    @apply bg-[#5419D7] text-white w-45 h-15 rounded-xl text-2xl hover:bg-[#7342de] cursor-pointer mt-6 flex justify-center items-center gap-2;
+  }
 
-@layer components{
-  .profile-Wrapper{
-    @apply bg-[#F9E6FF] min-h-[87vh] w-full flex flex-row px-20 gap-20
+  .imageDiv {
+    @apply flex items-center justify-center;
   }
-  .introText{
-    @apply pt-17 flex flex-col gap-6
-  }
-  .contact-btn{
-    @apply bg-[#5419D7] text-white w-45 h-15 rounded-xl text-2xl hover:bg-[#7342de] cursor-pointer mt-6 flex justify-center items-center gap-2
-  }
-
-  .imageDiv{
-    @apply flex items-center justify-center
-  }
-  .profilePic{
-    @apply h-[65%] rounded-full object-contain
+  .profilePic {
+    @apply h-[50%] sm:h-[65%] rounded-full object-contain;
   }
 }
 
 /* -----### Skill Card ###------ */
 
-@layer contain{
-  .skillCardWrapper{
-    @apply bg-white px-4 h-130 w-90 rounded-3xl flex flex-col justify-center items-center gap-5
+@layer contain {
+  .skillCardWrapper {
+    @apply bg-white px-4 h-130 w-90 rounded-3xl flex flex-col justify-center items-center gap-5;
   }
-  .skillImg{
-    @apply h-55 w-full object-cover rounded-xl
+  .skillImg {
+    @apply h-55 w-full object-cover rounded-xl;
   }
-  .skillTitle{
-    @apply bg-[#5419D7] w-40 h-8 flex justify-center items-center text-white rounded-xl
+  .skillTitle {
+    @apply bg-[#5419D7] w-40 h-8 flex justify-center items-center text-white rounded-xl;
   }
-  .skillp{
-    @apply line-clamp-6
+  .skillp {
+    @apply line-clamp-6;
   }
-  .skill-btn{
-    @apply bg-[#8d63e8] text-white w-35 h-10 rounded-xl cursor-pointer
+  .skill-btn {
+    @apply bg-[#8d63e8] text-white w-35 h-10 rounded-xl cursor-pointer;
   }
 }
-
 
 /* ###------ Skills Section -------### */
 
-@layer container{
-  .SkillWrapper{
-    @apply flex flex-col px-20 min-h-screen w-full bg-[#F9E6FF] gap-10
+@layer container {
+  .SkillWrapper {
+    @apply flex flex-col px-20 min-h-screen w-full bg-[#F9E6FF] gap-10;
   }
-  .skillDiv1{
-    @apply flex flex-col pt-10 gap-2
+  .skillDiv1 {
+    @apply flex flex-col pt-10 gap-2;
   }
-  .skillH3{
-    @apply text-2xl text-[#27083F]
+  .skillH3 {
+    @apply text-2xl text-[#27083F];
   }
-  .skillSpan{
-    @apply text-4xl text-[#5419D7]
+  .skillSpan {
+    @apply text-4xl text-[#5419D7];
   }
-  .skillH1{
-    @apply text-5xl
+  .skillH1 {
+    @apply text-5xl;
   }
-  .skillCardDiv{
-    @apply flex gap-20 px-10
+  .skillCardDiv {
+    @apply flex gap-20 px-10;
   }
 }
-
 
 /* ### ------- Project Card ----- ### */
 
-@layer component{
-  .ProjectCardWrapper{
-    @apply bg-white h-130 w-90 shrink-0 px-4 py-4 rounded-3xl flex flex-col justify-center items-center gap-5
+@layer component {
+  .ProjectCardWrapper {
+    @apply bg-white h-130 w-90 shrink-0 px-4 py-4 rounded-3xl flex flex-col justify-center items-center gap-5;
   }
 
-  .ProjectImg{
-    @apply w-full h-55 object-cover rounded-xl
+  .ProjectImg {
+    @apply w-full h-55 object-cover rounded-xl;
   }
 
-  .ProjectTitle{
-    @apply bg-[#5419D7] w-40 h-8 flex justify-center items-center rounded-xl text-white 
+  .ProjectTitle {
+    @apply bg-[#5419D7] w-40 h-8 flex justify-center items-center rounded-xl text-white;
   }
-  .LiveBtn{
-    @apply bg-[#8d63e8] text-white p-2 rounded-xl text-[15px] w-20 hover:bg-[#7e61d3] cursor-pointer
+  .LiveBtn {
+    @apply bg-[#8d63e8] text-white p-2 rounded-xl text-[15px] w-20 hover:bg-[#7e61d3] cursor-pointer;
   }
-  .Code{
-    @apply bg-[#8d63e8] text-white p-2 rounded-xl w-10 hover:bg-[#7e61d3] flex justify-center items-center cursor-pointer
+  .Code {
+    @apply bg-[#8d63e8] text-white p-2 rounded-xl w-10 hover:bg-[#7e61d3] flex justify-center items-center cursor-pointer;
   }
 }
 
-
 /* ### -------- Project Section -------### */
 
-@layer component{
-  .pWrapper{
-    @apply bg-[#F9E6FF] min-h-screen px-20 flex flex-col gap-7
+@layer component {
+  .pWrapper {
+    @apply bg-[#F9E6FF] min-h-screen px-20 flex flex-col gap-7;
   }
-  .pButton{
-    @apply flex justify-center items-center bg-[#420D72] rounded-full h-14 w-14 hover:bg-[#6a3d95] disabled:opacity-40
+  .pButton {
+    @apply flex justify-center items-center bg-[#420D72] rounded-full h-14 w-14 hover:bg-[#6a3d95] disabled:opacity-40;
   }
-  .pButtonIcon{
-    @apply text-white h-8 w-8
+  .pButtonIcon {
+    @apply text-white h-8 w-8;
   }
-  .pBtnDiv{
-    @apply flex justify-center items-center gap-5
+  .pBtnDiv {
+    @apply flex justify-center items-center gap-5;
   }
 }
 
 /* ### ---------Menu Bar --------### */
 
-@layer component{
-  .MenuLi{
-    @apply flex justify-center items-center gap-3
+@layer component {
+  .MenuLi {
+    @apply flex justify-center items-center gap-3;
   }
 }
 
-
 /* ### ------- Contact ------ ### */
-@layer component{
-  .ContactWrapper{
-    @apply bg-[#F9E6FF] min-h-[90vh] px-20 flex pt-10 gap-40
+@layer component {
+  .ContactWrapper {
+    @apply bg-[#F9E6FF] min-h-[90vh] px-20 flex pt-10 gap-40;
   }
-  .ConDiv1{
-    @apply bg-[#F1D7FA] h-[80vh] w-[30vw] rounded-3xl pt-10
+  .ConDiv1 {
+    @apply bg-[#F1D7FA] h-[80vh] w-[30vw] rounded-3xl pt-10;
   }
-  .ConForm{
-    @apply flex flex-col px-10 gap-4
+  .ConForm {
+    @apply flex flex-col px-10 gap-4;
   }
-  .formDiv1{
-    @apply flex flex-col gap-3
+  .formDiv1 {
+    @apply flex flex-col gap-3;
   }
-  .formInput{
-    @apply w-full h-10 bg-white rounded-xl px-4 outline-none border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500
+  .formInput {
+    @apply w-full h-10 bg-white rounded-xl px-4 outline-none border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500;
   }
-  .formMess{
-    @apply w-full h-40 p-4 bg-white resize-none rounded-2xl outline-none border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500
+  .formMess {
+    @apply w-full h-40 p-4 bg-white resize-none rounded-2xl outline-none border border-gray-300 focus:ring-2 focus:ring-violet-500 focus:border-violet-500;
   }
 
-
-  .contDiv2{
-    @apply flex justify-center items-start pt-10
+  .contDiv2 {
+    @apply flex justify-center items-start pt-10;
   }
-  .contImg{
-    @apply w-[70vh] h-auto object-contain
+  .contImg {
+    @apply w-[70vh] h-auto object-contain;
   }
 }

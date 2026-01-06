@@ -6,15 +6,15 @@ import { TiThMenu } from "react-icons/ti";
 const Navbar = ({ setOpen }) => {
   return (
     <div className="navWraper">
-      <img className="h-14 w-16" src={Logo} alt="logo" />
+      <img className="h-9 w-10 sm:h-14 sm:w-16" src={Logo} alt="logo" />
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 sm:gap-4">
         <a
           aria-label="Open Resume"
           className="nav-Btn"
           href=""
         >
-          <img className="h-10 w-10" src={resume} alt="resume" />
+          <img className="h-6 w-6 sm:h-10 sm:w-10" src={resume} alt="resume" />
         </a>
 
         <button
