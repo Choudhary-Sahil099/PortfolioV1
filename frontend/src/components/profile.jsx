@@ -26,7 +26,7 @@ const Profile = () => {
           </button>
         </div>
         <div className="imageDiv">
-          <img className="profilePic" src="/api/profile-image" alt="profile" />
+          <img className="h-[70%] w-full sm:h-[65%] rounded-full object-contain" src="/api/profile-image" alt="profile" />
         </div>
       </section>
   );

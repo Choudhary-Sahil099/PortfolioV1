@@ -1,12 +1,12 @@
 import React from 'react'
 
-const SkillCard = ({Img,title,des}) => {
+const SkillCard = ({Img,title,des, onClick }) => {
   return (
     <div className='skillCardWrapper'>
       <img src={Img} alt="#image" className='skillImg'/>
       <div className='skillTitle'>{title}</div>
       <p className='skillp'>{des}</p>
-      <button className='skill-btn'>Technologies</button>
+      <button onClick={onClick} className='skill-btn'>Technologies</button>
     </div>
   )
 }

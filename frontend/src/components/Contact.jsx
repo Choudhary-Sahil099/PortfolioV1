@@ -33,8 +33,7 @@ const Contact = () => {
       toast.error(error.message);
     }
   };
-  console.log(import.meta.env);
-
+  
   return (
     <section
       className="ContactWrapper"
