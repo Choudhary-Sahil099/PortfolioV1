@@ -4,6 +4,8 @@ import Web from "../assets/web.png";
 import Ai from "../assets/Ai.png";
 import Problem from "../assets/problemSolving.png";
 import WebdevCards from "./WebdevCards";
+import MLCards from "./MLCards";
+import ProblemCards from "./ProblemCards";
 
 const Skill = () => {
   const [activeSkill, setActiveSkill] = useState(null);

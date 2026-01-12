@@ -6,7 +6,7 @@ const SkillCard = ({Img,title,des, onClick }) => {
       <img src={Img} alt="#image" className='skillImg'/>
       <div className='skillTitle'>{title}</div>
       <p className='skillp'>{des}</p>
-      <button onClick={onClick} className='skill-btn'>Technologies</button>
+      <button onClick={onClick} className='skill-btn'>View More</button>
     </div>
   )
 }
