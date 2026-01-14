@@ -208,7 +208,7 @@ html {
 
 @layer contain {
   .skillCardWrapper {
-    @apply bg-white px-3 sm:px-4 h-110 sm:h-130 sm:w-90 rounded-3xl flex flex-col justify-center items-center sm:gap-5 gap-3;
+    @apply bg-white px-3 sm:px-4 h-110 sm:h-130 sm:min-w-[360px] sm:max-w-[440px] w-full rounded-3xl flex flex-col justify-center items-center sm:gap-5 gap-3 ;
   }
   .skillImg {
     @apply h-40 sm:h-55 w-full object-cover rounded-xl;
@@ -243,7 +243,7 @@ html {
     @apply text-3xl sm:text-5xl;
   }
   .skillCardDiv {
-    @apply flex flex-col gap-7 px-5 sm:flex-row sm:gap-20 sm:px-10;
+    @apply flex flex-col gap-7 px-5 sm:flex-row sm:gap-20 sm:px-10 shrink-0;
   }
 }
 
@@ -320,5 +320,12 @@ html {
   }
   .contImg {
     @apply w-[70vh] h-auto object-contain;
+  }
+}
+   /* ## ---- animation -- >>>  */
+@layer utilities {
+  .animate-slideIn { 
+    opacity: 1;
+    transform: translateX(0);
   }
 }

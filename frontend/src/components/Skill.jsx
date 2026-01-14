@@ -9,6 +9,7 @@ import ProblemCards from "./ProblemCards";
 
 const Skill = () => {
   const [activeSkill, setActiveSkill] = useState(null);
+
   const skills = [
     {
       id: "web",
@@ -29,8 +30,10 @@ const Skill = () => {
       des: "I consistently practice problem solving to strengthen my algorithmic thinking and write efficient, optimized solutions. I approach challenges methodically and enjoy tackling complex problems—skills I aim to apply while contributing meaningfully to GSoC projects.",
     },
   ];
+
   return (
     <section className="SkillWrapper" id="skill">
+      {/* HEADER */}
       <div className="skillDiv1">
         <h3 className="skillH3">Skills i have</h3>
         <h1 className="skillH1">
@@ -38,26 +41,45 @@ const Skill = () => {
           <br /> I work with
         </h1>
       </div>
-      <div className="skillCardDiv">
-        {skills.map(
-          (skill) =>
-            (!activeSkill || activeSkill === skill.id) && (
-              <SkillCard
-                key={skill.id}
-                Img={skill.img}
-                title={skill.title}
-                des={skill.des}
-                onClick={() =>
-                  setActiveSkill(activeSkill === skill.id ? null : skill.id)
-                }
-                isActive={activeSkill === skill.id}
-              />
-            )
+
+      {/* 🔥 MAIN LAYOUT CONTAINER */}
+      <div className="flex flex-col lg:flex-row gap-12 items-start">
+
+        {/* LEFT SIDE → Skill Card (FIXED WIDTH) */}
+        <div className="min-w-[320px] max-w-[420px] w-full shrink-0">
+          <div className="skillCardDiv">
+            {skills.map(
+              (skill) =>
+                (!activeSkill || activeSkill === skill.id) && (
+                  <SkillCard
+                    key={skill.id}
+                    Img={skill.img}
+                    title={skill.title}
+                    des={skill.des}
+                    onClick={() =>
+                      setActiveSkill(
+                        activeSkill === skill.id ? null : skill.id
+                      )
+                    }
+                    isActive={activeSkill === skill.id}
+                  />
+                )
+            )}
+          </div>
+        </div>
+
+        {activeSkill && (
+          <div className="flex gap-6
+      transition-all duration-500 ease-out
+      opacity-0 translate-x-8
+      animate-slideIn">
+            {activeSkill === "web" && <WebdevCards />}
+            {activeSkill === "ml" && <MLCards />}
+            {activeSkill === "problem" && <ProblemCards />}
+          </div>
         )}
+
       </div>
-      {activeSkill === "web" && <WebdevCards />}
-      {activeSkill === "ml" && <MLCards />}
-      {activeSkill === "problem" && <ProblemCards />}
     </section>
   );
 };
