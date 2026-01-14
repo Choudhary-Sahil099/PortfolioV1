@@ -47,7 +47,10 @@ const Skill = () => {
                 Img={skill.img}
                 title={skill.title}
                 des={skill.des}
-                onClick={() => setActiveSkill(skill.id)}
+                onClick={() =>
+                  setActiveSkill(activeSkill === skill.id ? null : skill.id)
+                }
+                isActive={activeSkill === skill.id}
               />
             )
         )}

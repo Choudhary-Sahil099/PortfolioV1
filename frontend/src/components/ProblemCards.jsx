@@ -14,12 +14,12 @@ const ProblemCards = () => {
             <spam className='text-xl'>{'LeetCode'}</spam>
             <button className='skill-btn'>LeetCode</button>
         </div>
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-1'>
             <spam className='text-xl'>{'CodeForces'}</spam>
             <button className='skill-btn'>LeetCode</button>
             
         </div>
-        <div className='flex flex-col gap-3'>
+        <div className='flex flex-col gap-1'>
             <spam className='text-xl'>{'Discord'}</spam>
             <button className='skill-btn'>LeetCode</button>
             
